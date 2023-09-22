@@ -125,6 +125,9 @@ ul li{
     }
 }
 
+.container-content-home{
+    width: 85%;
+}
 /* --------- Footer ----------- */
 .row-footer-item{
     display: flex;
