@@ -1,19 +1,22 @@
 import React from 'react'
-// import imgcontent from '../'
+
 
 export default function Content() {
   return (
-    <div className='container-content-home m-auto'>
-        <div className='row-content-home'>
-            <div className='item-contet-home float-right'>
-              <img src='../img/pic_content_home' alt="" />
+    <>
+      <div className='container-content-home'>
+        <div className='row-content-home justify-center m-auto items-center grid self-center gap-3'>
+            <div className='item-contet-home m-auto'>
+                <h1>The Computer Set Product</h1>
+              <p className='md:w-full italic'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quod officia reprehenderit eum quam, cum veniam velit quibusdam, magni incidunt excepturi maiores, odit necessitatibus facere?.</p>
             </div>
-            <div className='item-contet-home float-left'>
-              The Computer Product
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic itaque, magni ipsa assumenda dolor corporis.</p>
+            <div className='item-contet-home m-auto'>
+              <img src='https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/pic_content_home.png' alt="" />
             </div>
         </div>
-    </div>
+      </div>
+    </>
+  
   )
 }
 
