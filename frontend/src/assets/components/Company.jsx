@@ -1,7 +1,12 @@
 import React from 'react'
+import Header from './all_header/Header'
+import Content from './company/Content'
 
 export default function Company() {
   return (
-    <div>Company</div>
+    <>
+      <Header content="Company"/>
+      <Content/>
+    </>
   )
 }
