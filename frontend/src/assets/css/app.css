@@ -97,7 +97,14 @@ ul li{
     .top-nav{
         display: none;
     }
+    .botton_nav{
+        padding: 0.9rem 1rem;
+    }
 }
+
+
+
+
 /* ----------------- Home ------------------- */
 .home-header{
     width: 100%;
@@ -256,12 +263,12 @@ ul li{
 .product_menu_tittle h1{
     font-size: 3rem;
 }
-.link_click_coffee li{
+.link_click_pc_part li{
     padding: .3rem .9rem;
     border-radius: 10px;
     border: #00000069 1px solid;
 }
-.link_click_coffee li:hover{
+.link_click_pc_part li:hover{
     border: var(--primarycolor) 1px solid;
 }
 .product_pc_row{
@@ -293,6 +300,95 @@ ul li{
     background: #b975e7c9;
     padding: .2rem .5rem;
 }
+@media (max-width: 1038px) {
+    .product_menu_container{
+        width: 100%;
+    }
+}
+@media (max-width: 880px) {
+    .product_pc_row{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 648px) {
+    .product_pc_row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 428px) {
+    .product_pc_row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 416px) {
+    .link_click_pc_part li a{
+        font-size: .9rem;
+    }
+}
+
+
+/* -------------- Conpany -------------- */
+.company_content_row{
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+}
+.company_content_item{
+    width: 90%;
+}
+.company_content_item h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+}
+.btn_company_content a{
+    background: var(--primarycolor);
+    padding: .8rem 1.5rem;
+     border-radius: 5px;
+}
+.btn_company_content a:hover{
+    background: #3d013dc7;
+}
+
+
+
+/* ------------ Contact ------------- */
+.contact_container{
+    background: var(--primarycolor);
+    grid-template-columns: 5% 60% 30%;
+}
+.contact_container .contact_form{
+    background: var(--whitecolor);
+}
+.heading h2{
+    font-size: 1.5rem;
+}
+.contact_form input, .contact_form textarea{
+    border: #00000062 solid 1px;
+}
+.input .icon-contact{
+    font-size: 1.5rem;
+}
+.button-contact .button{
+    background: #3d013de7;
+    border-radius: 10px;
+}
+.contact_info{
+    min-height: 100%;
+}
+@media (max-width: 1155px){
+    .contact_container{
+        grid-template-columns: 7% 55% 30%;
+    }
+}
+@media (max-width: 933px){
+    .contact_container{
+        grid-template-columns: 1fr;
+    }
+    .contact_info{
+        margin-bottom: 1.9rem
+    }
+}
+
 /* --------- Footer ----------- */
 .row-footer-item{
     display: flex;

@@ -54,9 +54,9 @@ export default function Product() {
         <div className='product_menu_tittle m-auto pt-6 pb-3'>
             <h1 className='text-center'>Pc Ginz Product</h1>
         </div>
-        <div className='link_click_coffee m-auto flex justify-center flex-wrap my-10'>
-            <li className='me-10 cursor-pointer'>
-                <a onClick={ () => setProductData(menuProduct)}>All Product</a>
+        <div className='link_click_pc_part m-auto flex justify-center flex-wrap my-10 gap-5'>
+            <li className='me-10  cursor-pointer'>
+                <a className='mt-6' onClick={ () => setProductData(menuProduct)}>All Product</a>
             </li>
             {
                 productcollection.map((item) => <li className='me-10 cursor-pointer'><a onClick={() => {menuProductFilter(item)}}>{item}</a></li>)
