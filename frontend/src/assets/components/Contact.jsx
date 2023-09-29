@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <>
     <Header content='Contact'/>
-    <Content />
     <Contact_info />
+    <Content />
     <Footer />
 
     </>

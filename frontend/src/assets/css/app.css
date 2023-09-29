@@ -388,6 +388,38 @@ ul li{
         margin-bottom: 1.9rem
     }
 }
+.build_own_pc_container{
+    width: 100%;
+    min-height: 80vh;
+    background: radial-gradient(rgba(0, 0, 0, 0.3),rgb(0,0,0,.3)),url('https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/bluid_pc.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat no-repeat;
+}
+.build_own_pc_content h1{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+.build_own_pc_content h4{
+    font-size: 4rem;
+    line-height: 3.5rem;
+}
+.build_own_pc_button  .button{
+    background: var(--primarycolor);
+    border-radius: 10px;
+    transition: .9s ease-in-out;
+}
+.build_own_pc_button  .button:hover{
+    background: #3d013d5d;
+}
+@media (max-width: 621px) {
+    .build_own_pc_content h1{
+        font-size: .8rem;
+    }
+    .build_own_pc_content h4{
+        font-size: 2rem;
+    }
+}
 
 /* --------- Footer ----------- */
 .row-footer-item{

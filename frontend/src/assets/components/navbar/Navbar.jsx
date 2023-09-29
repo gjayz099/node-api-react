@@ -27,22 +27,22 @@ export default function Navbar() {
         <div className='left-nav items-center '>
         <ul  className={navclick?' overflow-hidden': 'overflow-hidden clicknav'}>
           <li>
-            <Link className='uppercase mx-5' to='./'>Home</Link>
+            <Link onClick={menuToggle} className='uppercase mx-5' to='./'>Home</Link>
           </li>
           <li>
-            <Link className='uppercase mx-5' to='./shop'>Shop</Link>
+            <Link onClick={menuToggle} className='uppercase mx-5' to='./shop'>Shop</Link>
           </li>
           <li>
-            <Link className='uppercase mx-5' to='./company'>Company</Link>
+            <Link onClick={menuToggle} className='uppercase mx-5' to='./company'>Company</Link>
           </li>
           <li>
-            <Link className='uppercase mx-5' to='./contact'>Contact</Link>
+            <Link onClick={menuToggle} className='uppercase mx-5'  to='./contact'>Contact</Link>
           </li>
         </ul>
           <div className='cart-icon'>
             <BiCart className=' text-white cursor-pointer'/>
           </div>
-          <div className={navclick?'icon-bar' : 'icon-bar'} onClick={menuToggle}>
+          <div className={navclick?'icon-bar' : 'icon-bar'} onClick={menuToggle} >
             {navclick?<BiMenu /> : <BiMenuAltRight/>}
           </div>
         </div>

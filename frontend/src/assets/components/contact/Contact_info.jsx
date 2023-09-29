@@ -4,7 +4,7 @@ import { BiUser, BiEnvelope, BiMessageDetail, BiSolidEditLocation, BiSolidPhone,
 export default function Contact_info() {
   return (
     <>
-    <div className='contact_container m-auto grid my-5'>
+    <div className='contact_container m-auto grid'>
       <div className='logo'>
         <h1 className='text-white m-auto text-center'>GINZ</h1>
       </div>
