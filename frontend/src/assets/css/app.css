@@ -348,7 +348,9 @@ ul li{
 .btn_company_content a:hover{
     background: #3d013dc7;
 }
-
+.gallery_row{
+    grid-template-columns: repeat(4, 1fr);
+}
 
 
 /* ------------ Contact ------------- */

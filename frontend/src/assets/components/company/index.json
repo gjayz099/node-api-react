@@ -1,6 +1,36 @@
 {
-    "picture_gallery": {
-        "id" : 1,
-        "pic_gallery" : "dsadsadasdsa"
-    }
+    "picture_gallery": [
+        {
+            "id" : 1,
+            "pic_gallery" : "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery1.jpg"
+        },
+        {
+            "id" : 2,
+            "pic_gallery" : "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery2.jpg"
+        },
+        {
+            "id" : 3,
+            "pic_gallery": "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery3.jpg"
+        },
+        {
+            "id" : 4,
+            "pic_gallery": "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery4.jpg"
+        },
+        {
+            "id" : 5,
+            "pic_gallery": "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery5.jpg"
+        },
+        {
+            "id" : 6,
+            "pic_gallery": "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery6.jpg"
+        },
+        {
+            "id" : 7,
+            "pic_gallery": "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery7.jpg"
+        },
+        {
+            "id" : 8,
+            "pic_gallery": "https://raw.githubusercontent.com/gjayz099/node-api-react/main/frontend/src/assets/img/Gallery/Gallery8.jpg"
+        }
+    ]
 }
