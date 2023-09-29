@@ -22,7 +22,7 @@ export default function Navbar() {
       {/* top navbar */}
       <nav className='botton_nav items-center absolute'>
         <div className='right-nav'>
-          <a href="" className='logo uppercase italic'>Lo<span>go</span></a>
+          <a href="" className='logo uppercase italic'>GI<span>NZ</span></a>
         </div>
         <div className='left-nav items-center '>
         <ul  className={navclick?' overflow-hidden': 'overflow-hidden clicknav'}>
