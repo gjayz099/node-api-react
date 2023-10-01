@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const productRoutes = require('./routes/productRoute')
+const userRoutes = require('./routes/userRoute')
 const ErrorMiddlerware = require('./middlewares/errorMiddlerware')
 var cors = require('cors')
 const app = express()
@@ -18,9 +19,11 @@ app.get('/', (req, res) => {
 
 
 
-// ------ ROUTES
+// ------ Product ROUTES
 app.use('/api/products', productRoutes)
 
+// ------ User ROUTES
+app.use('/api/users', userRoutes)
 
 // ----- ERROR
 app.use(ErrorMiddlerware);

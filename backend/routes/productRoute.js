@@ -1,10 +1,10 @@
 const express = require('express')
-const {PostProducts, GetProducts, GetProductsID, PutProducts, DeleteProducts} = require('../controllers/productController')
-
-
+const { PostProducts, GetProducts, GetProductsID, PutProducts, DeleteProducts } = require('../controllers/productController')
 
 const router = express.Router();
 
+
+// api in Products
 // ----- POST
 router.post('/', PostProducts)
 
@@ -19,5 +19,6 @@ router.put('/:id', PutProducts)
 
 // ---- Delete
 router.delete('/:id', DeleteProducts)
+
 
 module.exports = router
