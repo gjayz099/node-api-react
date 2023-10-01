@@ -17,8 +17,9 @@ router.get('/:id', GetProductsID)
 // ------ PUT
 router.put('/:id', PutProducts)
 
-// ---- Delete
+// ---- DELETE
 router.delete('/:id', DeleteProducts)
+
 
 
 module.exports = router

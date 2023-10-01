@@ -3,20 +3,24 @@ const mongoose = require('mongoose')
 const productRoutes = require('./routes/productRoute')
 const userRoutes = require('./routes/userRoute')
 const ErrorMiddlerware = require('./middlewares/errorMiddlerware')
+
+
 var cors = require('cors')
 const app = express()
 const port = 3000
 
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:3000", // <-- location of the react app were connecting to
+    credentials: true,
+}))
 // ---- USE JSON
 app.use(express.json())
 
 
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.send("Hello App")
 })
-
-
 
 
 // ------ Product ROUTES
@@ -24,6 +28,8 @@ app.use('/api/products', productRoutes)
 
 // ------ User ROUTES
 app.use('/api/users', userRoutes)
+
+
 
 // ----- ERROR
 app.use(ErrorMiddlerware);
