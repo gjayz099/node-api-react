@@ -4,15 +4,14 @@ const productRoutes = require('./routes/productRoute')
 const userRoutes = require('./routes/userRoute')
 const ErrorMiddlerware = require('./middlewares/errorMiddlerware')
 
-
+var cookieparser = require("cookieparser");
 var cors = require('cors')
 const app = express()
 const port = 3000
 
-app.use(cors({
-    origin: "http://localhost:3000", // <-- location of the react app were connecting to
-    credentials: true,
-}))
+app.use(cors())
+
+cookieparser.parse("foo=bar");
 // ---- USE JSON
 app.use(express.json())
 
