@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 const jwt = require("jsonwebtoken");
