@@ -5,14 +5,14 @@ const router = express.Router();
 
 // api in BuyerItem
 // ----- POST
-router.post('/buyeritems', PostBuyerItems)
+router.post('/', PostBuyerItems)
 
 // ----- GET
-router.get('/buyeritems', GetBuyerItems)
+router.get('/', GetBuyerItems)
 
 
 // ----- GIT ID
-router.get('/buyeritems/:id', GetBuyerItemsID) 
+router.get('/:id', GetBuyerItemsID) 
 
 
 

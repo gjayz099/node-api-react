@@ -24,6 +24,7 @@ const PostBuyerItems =  asyncHandler(async(req, res) => {
             receive: req.body.receive,
         })
 
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json(buyeritem)
     }catch(error){
         console.log(error.message)
@@ -43,6 +44,7 @@ const GetBuyerItems = asyncHandler(async(req, res) => {
             path: 'products',
             select: ['productname', 'catogoryname', 'price']
         })
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json(buyeritem)
     }catch (error) {
         console.log(error.message)
@@ -66,6 +68,7 @@ const GetBuyerItemsID = asyncHandler(async(req, res) => {
         if(!buyeritem){
             return res.status(404).json({message: `cannot find any user with ID ${buyeritem_id}`})
         }
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json(buyeritem)
     }catch (error) {
         console.log(error.message)

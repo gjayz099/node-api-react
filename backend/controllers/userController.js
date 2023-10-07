@@ -8,7 +8,8 @@ const bcrypt = require('bcrypt')
 const GetUsers = asyncHandler(async(req, res) => {
     try{
         const user = await User.find({})
-        res.status(200).json(user)
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
+        res.status(200).json(user);
     }catch(error){
         console.log(error.message)
         res.status(500).json({message: error.message})
@@ -21,6 +22,7 @@ const GetUsersID = asyncHandler(async(req, res) => {
     try{
         const user_id = req.params.id
         const user = await User.findById(user_id)
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json(user)
     }catch(error){
         console.log(error.message)
@@ -38,6 +40,7 @@ const PutUsers  = asyncHandler(async(req, res) => {
             return res.status(404).json({message: `cannot find any user with ID ${user_id}`})
         }
         const updatedUser = await User.findById(user_id)
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json(updatedUser)
     }catch(error){
         console.log(error.message)
@@ -55,6 +58,7 @@ const DeleteUser = asyncHandler(async(req, res) => {
             return res.status(404).json({message: `cannot find any user with ID ${user_id}`})
         }
         console.log('Success Delete Data')
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json({message: 'Success Delete Data'})
     }catch(error){
         console.log(error.message)
@@ -83,8 +87,8 @@ const RegisterUser = asyncHandler(async(req, res) => {
             conpassword: hashedPassword,
             role: req.body.role,
         });
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json(user)
-        console.log(user)
         res.json({msg: "Registration Successful"}) // You can send a response with the created user or any other desired response.
       } catch (error) {
         console.error(error);
@@ -119,6 +123,7 @@ const LoginUser = asyncHandler(async (req, res) => {
             { expiresIn: "24h" }
         );
   
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).send({
             message: "Login Successful",
             email: user.email,
@@ -165,6 +170,7 @@ const changePassword = asyncHandler(async (req, res) => {
         user.password = hashedPassword;
         await user.save();
         
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
         res.status(200).json({ msg: "Password changed successfully" });
     } catch (error) {
       console.error(error);

@@ -13,6 +13,7 @@ export default function Product() {
         const response = await fetch('http://localhost:3000/api/products', {
           method: 'GET',
           headers: {
+            // "X-Api-Key" : "5325325yygdfgg7532578ghtrhtr782532",
             "X-Powered-By": "Express",
             "Content-Type": "application/json; charset=utf-8"
           },
