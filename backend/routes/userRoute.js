@@ -1,6 +1,6 @@
 const express = require('express')
 const { verifyToken } = require('../middlewares/authMiddleware')
-const { GetUsers, GetUsersID, PutUsers, DeleteUser, RegisterUser, LoginUser, changePassword } = require('../controllers/userController')
+const { GetUsers, GetUsersID, PutUsers, DeleteUser, RegisterUser, LoginUser, changePassword, AdminProtected } = require('../controllers/userController')
 
 
 const router = express.Router();
@@ -27,5 +27,7 @@ router.post("/login", LoginUser)
 
 //  ------ Change Password Routes
 router.post("/change-password/:id", changePassword)
+
+
 
 module.exports = router

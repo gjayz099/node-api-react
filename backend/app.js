@@ -1,10 +1,13 @@
 const express = require('express')
+const session = require('express-session');
 const mongoose = require('mongoose')
 const productRoutes = require('./routes/productRoute')
 const userRoutes = require('./routes/userRoute')
 const buyeritemsRoutes = require('./routes/buyeritemRoute')
 const ErrorMiddlerware = require('./middlewares/errorMiddlerware')
+const cookieParser = require('cookie-parser');
 var cookieparser = require("cookieparser");
+
 var cors = require('cors')
 const app = express()
 const port = 3000
@@ -13,12 +16,23 @@ const port = 3000
 
 app.use(cors())
 
+app.use(cookieParser());
 cookieparser.parse("foo=bar");
 // ---- USE JSON
 app.use(express.json())
 
 
+// Initialize session middleware
+app.use(
+    session({
+      secret: 'your-secret-key',
+      resave: false,
+      saveUninitialized: true,
+    })
+)
+
 // app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
     res.send("Hello App")
 })

@@ -41,6 +41,9 @@ export default function Navbar() {
           <li>
               <Link onClick={menuToggle} className='uppercase mx-5'  to='./login'>Login</Link>
           </li>
+
+
+
         </ul>
           <div className='cart-icon'>
             <BiCart className=' text-white cursor-pointer'/>

@@ -6,7 +6,7 @@ import { useNavigate  } from "react-router-dom";
 
 export default function Login() {
 
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState("fdfa");
     const [password, setPassword] = useState("")
     const [msg, setMsg] = useState("")
 
@@ -43,7 +43,7 @@ export default function Login() {
               <div className="">
                 <form onSubmit={LoginAccout} className="">
                   <div className="">
-                    <label className="">Email or Username</label>
+                    <label className="">Email</label>
                     <div className="">
                       <input
                         type="text"

@@ -6,7 +6,7 @@ const Product = require('../models/productModel')
 const PostProducts = asyncHandler(async(req, res) => {
     try{
         const product = await Product.create(req.body)
-        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532')
         res.status(200).json(product)
     }catch(error){
         console.log(error.message)
@@ -19,7 +19,7 @@ const PostProducts = asyncHandler(async(req, res) => {
 const GetProducts = asyncHandler(async(req, res) => {
     try{    
         const product = await Product.find({})
-        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532')
         res.status(200).json(product)
     }catch(error){
         console.log(error.message)
@@ -33,7 +33,7 @@ const GetProductsID = asyncHandler(async(req, res) => {
     try{
         const product_id = req.params.id
         const product = await Product.findById(product_id)
-        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532')
         res.status(200).json(product)
     }catch(error){
         console.log(error.message)
@@ -50,7 +50,7 @@ const PutProducts  = asyncHandler(async(req, res) => {
             return res.status(404).json({message: `cannot find any product with ID ${product_id}`})
         }
         const updatedProduct = await Product.findById(product_id)
-        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532')
         res.status(200).json(updatedProduct)
     }catch(error){
         console.log(error.message)
@@ -66,7 +66,7 @@ const DeleteProducts = asyncHandler(async(req, res) => {
         if(!product){
             return res.status(404).json({message: `cannot find any product with ID ${product_id}`})
         }
-        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532');
+        res.set("X-Api-Key", '5325325yygdfgg7532578ghtrhtr782532')
         res.status(200).json({message: 'Success Delete Data'})
     }catch(error){
         console.log(error.message)
